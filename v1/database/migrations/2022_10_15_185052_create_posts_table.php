@@ -15,7 +15,15 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->float('price');
+            $table->string('image')->nullable();
+            $table->text('comment');
             $table->timestamps();
+            $table->float('rating', 4, 2)->nullable();
+            $table->unsignedBigInteger('rating_sum')->default(0);
+            $table->unsignedBigInteger('rating_count')->default(0);
+            $table->text('votes')->nullable();
         });
     }
 
