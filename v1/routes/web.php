@@ -20,3 +20,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::prefix('post')->name('post_')->group(function () {
+    Route::get('/', [Post::class, 'index'])->name('index');
+    Route::get('/create', [Post::class, 'create'])->name('create');
+    Route::post('/create', [Post::class, 'store'])->name('store');
+    Route::get('/show/{post}', [Post::class, 'show'])->name('show');
+    Route::delete('/delete/{post}', [Post::class, 'destroy'])->name('delete');
+    Route::get('/edit/{post}', [Post::class, 'edit'])->name('edit');
+    Route::put('/edit/{post}', [Post::class, 'update'])->name('update');
+});
