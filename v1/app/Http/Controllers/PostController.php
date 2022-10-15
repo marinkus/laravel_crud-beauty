@@ -52,7 +52,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('post.show', ['post' => $post]);
     }
 
     /**
@@ -63,7 +63,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('post.edit', ['post' => $post])
     }
 
     /**
@@ -75,7 +75,11 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->update([
+            'title' => $request->title,
+            'price' => $request->price,
+            'comment' => $request->comment
+        ]);
     }
 
     /**
@@ -86,6 +90,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $movie->delete();
     }
 }
