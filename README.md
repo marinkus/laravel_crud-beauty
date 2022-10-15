@@ -5,6 +5,9 @@
 
 
 # For my hairstylist **MAC** <3
+*First project for my portfolio.*
+
+Site published at: *Not published yet*
 
 
 Basic *CRUD* on **Laravel**, for improving skills,  learning something new and  testing new (maybe fancy) features.
