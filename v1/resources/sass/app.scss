@@ -7,6 +7,9 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
+body {
+    background-color: #fff;
+}
 .navi {
     height: 120px;
     box-shadow: none;
@@ -14,6 +17,10 @@
 
 .form-div {
     border: 1px solid rgba(56, 55, 55, 0.747);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
 }
 
 .heading {
