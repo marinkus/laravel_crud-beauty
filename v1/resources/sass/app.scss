@@ -6,3 +6,24 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+.navi {
+    height: 120px;
+    box-shadow: none;
+}
+
+.form-div {
+    border: 1px solid rgba(56, 55, 55, 0.747);
+
+}
+@media(max-width:800px) {
+    .navi {
+        height: 80px;
+    }
+}
+
+// @media(max-width:468px) {
+//     .navi {
+//         height: 50px;
+//     }
+// }
