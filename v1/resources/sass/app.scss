@@ -21,12 +21,25 @@ body {
     justify-content: center;
     align-content: center;
     box-sizing: border-box;
+    flex-direction: column;
 }
 
 .heading {
     font-size: 26px;
     font-weight: 500px;
 }
+.description {
+    font-size: 16px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
 @media(max-width:800px) {
     .navi {
         height: 80px;
