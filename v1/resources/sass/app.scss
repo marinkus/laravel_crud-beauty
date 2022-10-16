@@ -66,6 +66,13 @@ body {
     }
 }
 
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+    gap: 20px;
+}
+
 
 @media(max-width:800px) {
     .navi {
@@ -77,8 +84,8 @@ body {
     }
 }
 
-// @media(max-width:468px) {
-//     .navi {
-//         height: 50px;
-//     }
-// }
+@media(max-width:600px) {
+    .block {
+        display: block;
+    }
+}
