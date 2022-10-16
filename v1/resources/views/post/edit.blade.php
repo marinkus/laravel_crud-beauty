@@ -7,7 +7,7 @@
                 <form action="{{route('post_edit', $post)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('put')
-                <h3 class="heading">Create post</h3>
+                <h3 class="heading">Edit post: {{$post->title}}</h3>
                 <div class="mb-3">
                     <span class="input-group-text">Title</span>
                     <input value="{{ old('title', $post->title) }}" type="text" class="form-control" name="title">
@@ -24,7 +24,7 @@
                     <span class="input-group-text">Comment</span>
                     <textarea class="form-control" name="comment">{{ old('comment', $post->comment) }}</textarea>
                 </div>
-                <button type="submit" class="btn btn-primary mt-4">Publish</button>
+                <button type="submit" class="btn btn-primary mt-4">Save changes</button>
                 </form>
             </div>
         </div>
