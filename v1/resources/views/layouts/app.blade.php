@@ -73,9 +73,15 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>
 </body>
+<footer>
+    <div class="footer">
+        <img src="{{URL::asset('assets/cocochoco_BLACK_new_logo_PNG_10.21_f527e903-1206-438e-80cb-96c7613e523b_2752x.webp')}}" alt="">
+        <img src="{{URL::asset('assets/olaplex-vector-logo.png')}}" alt="">
+    </div>
+</footer>
 </html>
