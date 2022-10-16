@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 @empty
-                    NOTHING TO SHOW
+                    <p class="description">Photos will be uploaded soon.</p>
                 @endforelse
 
 
