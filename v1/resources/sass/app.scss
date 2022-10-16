@@ -10,9 +10,20 @@
 body {
     background-color: #fff;
 }
+
+.login-box {
+    display: inline;
+}
+
 .navi {
     height: 120px;
     box-shadow: none;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: grey;
+    text-decoration: none;
 }
 
 .form-div {
@@ -23,24 +34,36 @@ body {
     box-sizing: border-box;
     flex-direction: column;
 }
-.image {
-    width: auto;
-    height: 600px;
-}
+
 
 .heading {
     font-size: 26px;
     font-weight: 500px;
 }
+
 .description {
     font-size: 16px;
     color: grey;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .buttons {
     display: flex;
     flex-direction: row;
     width: 100%;
+}
+
+.hero-box {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.logo-box {
+    img {
+        width: 100%;
+        opacity: 0.7;
+    }
 }
 
 
@@ -48,6 +71,7 @@ body {
     .navi {
         height: 80px;
     }
+
     .image {
         height: 400px;
     }

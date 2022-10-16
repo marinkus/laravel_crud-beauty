@@ -10,6 +10,7 @@
     <title>MAC - Hair Stylist</title>
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
