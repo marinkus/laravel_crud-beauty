@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Models\Photo;
 
 class PostController extends Controller
 {
@@ -40,8 +41,10 @@ class PostController extends Controller
             'title' => $request->title,
             'price' => $request->price,
             'comment' => $request->comment
-        ]);
-        return redirect()->back();
+        ])->addPhotos($request->file('photo'));
+
+
+        return redirect()->route('post_index');
     }
 
     /**
@@ -80,7 +83,10 @@ class PostController extends Controller
             'price' => $request->price,
             'comment' => $request->comment
         ]);
-        return redirect()->back();
+        $post->removePhotos($request->delete_photo)
+        ->addPhotos($request->file('photo'));
+
+        return redirect()->route('post_index');
     }
 
     /**
@@ -91,6 +97,11 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        if ($post->getPhotos()->count()) {
+            $delIds = $post->getPhotos()->pluck('id')->all();
+            $post->removePhotos($delIds);
+        }
         $post->delete();
+        return redirect()->route('post_index');
     }
 }

@@ -17,7 +17,7 @@
                 </div>
                 <div class="mb-3">
                     <span class="input-group-text">Add photo</span>
-                    <input type="file" class="form-control" name="title">
+                    <input type="file" class="form-control" name="photo[]" multiple>
                 </div>
                 <div class="mb-3">
                     <span class="input-group-text">Comment</span>

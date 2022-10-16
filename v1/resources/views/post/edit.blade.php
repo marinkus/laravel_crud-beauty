@@ -18,8 +18,23 @@
                 </div>
                 <div class="mb-3">
                     <span class="input-group-text">Add photo</span>
-                    <input type="file" class="form-control" name="title">
+                    <input type="file" class="form-control" name="photo[]" multiple>
                 </div>
+                <div class="img-small-ch mt-3">
+                    @forelse($post->getPhotos as $photo)
+                        <div class="image">
+                            <label for="{{ $photo->id }}-del-photo">
+                                X
+                            </label>
+                            <input type="checkbox" value="{{ $photo->id }}"
+                                id="{{ $photo->id }}-del-photo" name="delete_photo[]">
+                            <img src="{{ $photo->url }}" alt="photo">
+                        </div>
+                    @empty
+                        <div class="img-small mt-3">
+                            <h5>// Post has no images</h5>
+                        </div>
+                    @endforelse
                 <div class="mb-3">
                     <span class="input-group-text">Comment</span>
                     <textarea class="form-control" name="comment">{{ old('comment', $post->comment) }}</textarea>
