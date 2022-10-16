@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container">
+<div class="container ">
     <div class="row justify-content-center block">
         <div class="col-5 justify-content-center hero-box">
             <h1>Hair stylist - MAC</h1>

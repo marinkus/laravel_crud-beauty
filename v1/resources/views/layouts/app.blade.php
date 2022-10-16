@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +18,7 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
+
 <body class="antialiased">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white navi">
@@ -24,7 +26,9 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'MAC HairStylist') }}
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -51,13 +55,14 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
@@ -80,8 +85,20 @@
 </body>
 <footer>
     <div class="footer">
-        <img src="{{URL::asset('assets/cocochoco_BLACK_new_logo_PNG_10.21_f527e903-1206-438e-80cb-96c7613e523b_2752x.webp')}}" alt="">
-        <img src="{{URL::asset('assets/olaplex-vector-logo.png')}}" alt="">
+        <div class="footer-blocks">
+            <img class="footer-element" src="{{ URL::asset('assets/cocochoco_BLACK_new_logo_PNG_10.21_f527e903-1206-438e-80cb-96c7613e523b_2752x.webp') }}"
+                alt="">
+            <img class="footer-element" src="{{ URL::asset('assets/olaplex-vector-logo.png') }}" alt="">
+        </div>
+        <div class="footer-blocks">
+            <a class="footer-element" href="https://ms-my.facebook.com/Viktorija.Macikiene/" target="_blank"><img
+                    src="{{ URL::asset('assets/298-2983746_facebook-svg-png-icon-free-download-276959-onlinewebfonts-logo-facebook-cdr.png') }}"
+                    alt="Facebook"></a>
+            <a class="footer-element" href="https://www.instagram.com/plauku_stiliste_mac/" target="_blank"><img
+                    src="{{ URL::asset('assets/169-1696957_instagram-icon-instagram-icon-svg-white.png') }}"
+                    alt="Instagram"></a>
+        </div>
     </div>
 </footer>
+
 </html>
