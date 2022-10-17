@@ -96,6 +96,29 @@ body {
     }
 }
 
+.modal-content-title {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.modal-date {
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+}
+.modal-description {
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.modal-context {
+    background-color: grey;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
 
 @media(max-width:800px) {
     .navi {

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController as Post;
+use App\Http\Controllers\HomeController as HC;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +15,13 @@ use App\Http\Controllers\PostController as Post;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HC::class, 'index'])->name('home');
+Route::get('/', [HC::class, 'landingPage'])->name('welcome');
+// Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
+// Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 
 Route::prefix('post')->name('post_')->group(function () {
     Route::get('/', [Post::class, 'index'])->name('index');
