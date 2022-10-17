@@ -16,12 +16,11 @@ use App\Http\Controllers\HomeController as HC;
 */
 
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', [HC::class, 'index'])->name('home')->middleware('gate:home');
 Route::get('/', [HC::class, 'landingPage'])->name('welcome')->middleware('gate:home');
-// Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
-// Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about')->middleware('gate:home');
 
 Route::prefix('post')->name('post_')->group(function () {
     Route::get('/', [Post::class, 'index'])->name('index')->middleware('gate:show');

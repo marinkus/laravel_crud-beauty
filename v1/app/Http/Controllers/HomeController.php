@@ -31,4 +31,8 @@ class HomeController extends Controller
         $photos  = Photo::all();
         return view('welcome', ['photos' => $photos]);
     }
+    public function about()
+    {
+        return view('pages.about');
+    }
 }

@@ -9,11 +9,11 @@
                 <div class="buttons">
                     <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">Gallery</button>
-                    <a class="btn btn-secondary" href="#">About</a>
+                    <a class="btn btn-secondary" href="{{route('about')}}">About</a>
                 </div>
             </div>
             <div class="col-6 block logo-box">
-                <img src="{{ URL::asset('assets/IMG_1665918435840.jpg') }}" alt="#">
+                <img src="{{ URL::asset('images/IMG_1665918435840.jpg') }}" alt="#">
             </div>
         </div>
 

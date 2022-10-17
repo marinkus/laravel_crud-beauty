@@ -10,6 +10,7 @@
 body {
     background-color: #fff;
 }
+
 .container {
     a {
         .logo {
@@ -83,24 +84,30 @@ body {
     margin-top: 30px;
     gap: 20px;
 }
+
 .footer {
     display: flex;
     height: 100%;
     justify-content: space-around;
     background-color: rgba(173, 168, 168, 0.877);
+
     .footer-blocks {
         padding: 15px;
+
         .footer-element:first-child {
             margin-right: 10px;
         }
     }
+
     img {
         height: 60px;
     }
+
     a {
         transition: 0.5s;
         transition-duration: 0.5s;
     }
+
     a:hover {
         opacity: 0.4;
     }
@@ -112,21 +119,31 @@ body {
     font-weight: 500;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .modal-date {
     color: black;
     font-size: 12px;
     font-weight: 600;
 }
+
 .modal-description {
     color: black;
     font-size: 14px;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .modal-context {
     background-color: grey;
     opacity: 0.8;
     border-radius: 10px;
+}
+
+.bg-color-grey {
+    background-color: rgba(173, 168, 168, 0.877);
+    padding: 0;
+    margin: 0;
+    opacity: 0.6;
 }
 
 .img-small-ch {
@@ -135,12 +152,14 @@ body {
         width: auto;
         height: 150px;
         margin: 20px;
+
         img {
             width: auto;
             height: 150px;
             position: relative;
             z-index: 10;
         }
+
         label {
             position: absolute;
             z-index: 12;
@@ -159,13 +178,39 @@ body {
             user-select: none;
             cursor: pointer;
         }
+
         [type=checkbox] {
             display: none;
-            &:checked ~ img {
+
+            &:checked~img {
                 opacity: 0.3;
             }
         }
     }
+}
+
+.map-row {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.map {
+    border: solid 2px gray;
+    border-radius: 15px;
+    .heading {
+        font-size: 20px;
+        color: grey;
+    }
+
+    .description {
+        font-size: 14px;
+        color: grey;
+    }
+}
+
+.margins {
+    margin: 50px 0 50px 0;
 }
 
 
@@ -177,6 +222,7 @@ body {
     .image {
         height: 400px;
     }
+
     .container {
         a {
             .logo {
@@ -184,12 +230,15 @@ body {
             }
         }
     }
+
     .col-3 {
         width: auto;
     }
+
     .form-div {
         margin: 0;
     }
+
     .navbar-collapse {
         background-color: rgba(173, 168, 168, 0.877);
     }

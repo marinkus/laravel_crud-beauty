@@ -11,7 +11,6 @@
     <title>MAC - Hair Stylist</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
@@ -24,7 +23,7 @@
         <nav class="navbar navbar-expand-md navbar-light navi">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img class="logo" src="{{URL::asset('assets/logo.png')}}" alt="">
+                    <img class="logo" src="{{URL::asset('images/logo.png')}}" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -135,16 +134,16 @@
     <div class="footer">
         <div class="footer-blocks">
             <img class="footer-element"
-                src="{{ URL::asset('assets/cocochoco_BLACK_new_logo_PNG_10.21_f527e903-1206-438e-80cb-96c7613e523b_2752x.webp') }}"
+                src="{{ URL::asset('images/cocochoco_BLACK_new_logo_PNG_10.21_f527e903-1206-438e-80cb-96c7613e523b_2752x.webp') }}"
                 alt="">
-            <img class="footer-element" src="{{ URL::asset('assets/olaplex-vector-logo.png') }}" alt="">
+            <img class="footer-element" src="{{ URL::asset('images/olaplex-vector-logo.png') }}" alt="">
         </div>
         <div class="footer-blocks">
             <a class="footer-element" href="https://ms-my.facebook.com/Viktorija.Macikiene/" target="_blank"><img
-                    src="{{ URL::asset('assets/298-2983746_facebook-svg-png-icon-free-download-276959-onlinewebfonts-logo-facebook-cdr.png') }}"
+                    src="{{ URL::asset('images/298-2983746_facebook-svg-png-icon-free-download-276959-onlinewebfonts-logo-facebook-cdr.png') }}"
                     alt="Facebook"></a>
             <a class="footer-element" href="https://www.instagram.com/plauku_stiliste_mac/" target="_blank"><img
-                    src="{{ URL::asset('assets/169-1696957_instagram-icon-instagram-icon-svg-white.png') }}"
+                    src="{{ URL::asset('images/169-1696957_instagram-icon-instagram-icon-svg-white.png') }}"
                     alt="Instagram"></a>
         </div>
     </div>
