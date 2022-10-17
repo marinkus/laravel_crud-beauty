@@ -18,17 +18,17 @@ use App\Http\Controllers\HomeController as HC;
 
 Auth::routes();
 
-Route::get('/home', [HC::class, 'index'])->name('home');
-Route::get('/', [HC::class, 'landingPage'])->name('welcome');
+Route::get('/home', [HC::class, 'index'])->name('home')->middleware('gate:home');
+Route::get('/', [HC::class, 'landingPage'])->name('welcome')->middleware('gate:home');
 // Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
 // Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 
 Route::prefix('post')->name('post_')->group(function () {
-    Route::get('/', [Post::class, 'index'])->name('index');
-    Route::get('/create', [Post::class, 'create'])->name('create');
-    Route::post('/create', [Post::class, 'store'])->name('store');
-    Route::get('/show/{post}', [Post::class, 'show'])->name('show');
-    Route::delete('/delete/{post}', [Post::class, 'destroy'])->name('delete');
-    Route::get('/edit/{post}', [Post::class, 'edit'])->name('edit');
-    Route::put('/edit/{post}', [Post::class, 'update'])->name('update');
+    Route::get('/', [Post::class, 'index'])->name('index')->middleware('gate:show');
+    Route::get('/create', [Post::class, 'create'])->name('create')->middleware('gate:show');
+    Route::post('/create', [Post::class, 'store'])->name('store')->middleware('gate:admin');
+    Route::get('/show/{post}', [Post::class, 'show'])->name('show')->middleware('gate:show');
+    Route::delete('/delete/{post}', [Post::class, 'destroy'])->name('delete')->middleware('gate:admin');
+    Route::get('/edit/{post}', [Post::class, 'edit'])->name('edit')->middleware('gate:show');
+    Route::put('/edit/{post}', [Post::class, 'update'])->name('update')->middleware('gate:admin');
 });

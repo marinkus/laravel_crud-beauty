@@ -72,6 +72,21 @@
                                     </form>
                                 </div>
                             </li>
+                            @if (Auth::user()->role >= 7)
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        Admin panel
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('post_index') }}"> List of
+                                            posts</a>
+                                        <a class="dropdown-item" href="{{ route('post_create') }}"> Create post
+                                        </a>
+                                    </div>
+                                </li>
+                            @endif
                         @endguest
                     </ul>
                 </div>
@@ -86,7 +101,8 @@
 <footer>
     <div class="footer">
         <div class="footer-blocks">
-            <img class="footer-element" src="{{ URL::asset('assets/cocochoco_BLACK_new_logo_PNG_10.21_f527e903-1206-438e-80cb-96c7613e523b_2752x.webp') }}"
+            <img class="footer-element"
+                src="{{ URL::asset('assets/cocochoco_BLACK_new_logo_PNG_10.21_f527e903-1206-438e-80cb-96c7613e523b_2752x.webp') }}"
                 alt="">
             <img class="footer-element" src="{{ URL::asset('assets/olaplex-vector-logo.png') }}" alt="">
         </div>

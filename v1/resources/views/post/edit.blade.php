@@ -31,15 +31,15 @@
                             <img src="{{ $photo->url }}" alt="photo">
                         </div>
                     @empty
-                        <div class="img-small mt-3">
-                            <h5>// Post has no images</h5>
+                        <div class="img-small-ch mt-3">
+                            <h5>Post has no images</h5>
                         </div>
                     @endforelse
                 <div class="mb-3">
                     <span class="input-group-text">Comment</span>
                     <textarea class="form-control" name="comment">{{ old('comment', $post->comment) }}</textarea>
                 </div>
-                <button type="submit" class="btn btn-primary mt-4">Save changes</button>
+                <button type="submit" class="btn btn-secondary mt-4 mb-2 ml-2">Save changes</button>
                 </form>
             </div>
         </div>
