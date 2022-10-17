@@ -20,7 +20,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navi">
+        <nav class="navbar navbar-expand-md navbar-light navi mb-4">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img class="logo" src="{{URL::asset('images/logo.png')}}" alt="">
@@ -131,7 +131,7 @@
     </div>
 </body>
 <footer>
-    <div class="footer">
+    <div class="footer mt-4">
         <div class="footer-blocks">
             <img class="footer-element"
                 src="{{ URL::asset('images/cocochoco_BLACK_new_logo_PNG_10.21_f527e903-1206-438e-80cb-96c7613e523b_2752x.webp') }}"
