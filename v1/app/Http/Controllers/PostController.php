@@ -37,6 +37,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(
+            [
+                'title' => 'required|min:3|max:20',
+                'price' => 'required|numeric|min:1',
+                'photo.*' => 'sometimes|required|mimes:jpg|max:7000',
+                'comment' => 'required|min:5|max:100'
+            ]
+        );
         Post::create([
             'title' => $request->title,
             'price' => $request->price,
@@ -77,6 +85,14 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        $request->validate(
+            [
+                'title' => 'required|min:3|max:20',
+                'price' => 'required|numeric|min:1',
+                'photo.*' => 'sometimes|required|mimes:jpg|max:7000',
+                'comment' => 'required|min:5|max:100'
+            ]
+        );
         $post->update([
             'title' => $request->title,
             'price' => $request->price,
