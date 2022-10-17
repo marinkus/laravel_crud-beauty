@@ -39,7 +39,7 @@
                     <span class="input-group-text">Comment</span>
                     <textarea class="form-control" name="comment">{{ old('comment', $post->comment) }}</textarea>
                 </div>
-                <button type="submit" class="btn btn-secondary mt-4 mb-2 ml-2">Save changes</button>
+                <button type="submit" class="btn btn-secondary mt-4 mb-2 ml-2" @if (Auth::user()->role < 10) style="opacity: 0.3" disabled @endif>Save changes</button>
                 </form>
             </div>
         </div>

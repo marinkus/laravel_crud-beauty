@@ -23,7 +23,7 @@
                     <span class="input-group-text">Comment</span>
                     <textarea class="form-control" name="comment">{{ old('comment') }}</textarea>
                 </div>
-                <button type="submit" class="btn btn-primary mt-4">Publish</button>
+                <button type="submit" class="btn btn-primary mt-4" @if (Auth::user()->role < 10) style="opacity: 0.3" disabled @endif>Publish</button>
                 </form>
             </div>
         </div>

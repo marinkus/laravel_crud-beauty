@@ -18,7 +18,7 @@
                             <form action="{{ route('post_delete', $post) }}" method="post">
                                 @method('delete')
                                 @csrf
-                                <button type="submit" class="btn btn-secondary">Delete</button>
+                                <button type="submit" class="btn btn-secondary" @if (Auth::user()->role < 10) style="opacity: 0.3" disabled @endif>Delete</button>
                             </form>
                         </div>
                     </div>
