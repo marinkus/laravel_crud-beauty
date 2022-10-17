@@ -43,7 +43,6 @@ class PostController extends Controller
             'comment' => $request->comment
         ])->addPhotos($request->file('photo'));
 
-
         return redirect()->route('post_index')->with('msg', 'Post successfully created!');
     }
 

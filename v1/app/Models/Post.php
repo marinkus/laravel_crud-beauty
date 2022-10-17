@@ -56,4 +56,8 @@ class Post extends Model
         }
         return $this;
     }
+    public function lastImageUrl()
+    {
+        return $this->getPhotos()->orderBy('id', 'desc')->first()->url;
+    }
 }
