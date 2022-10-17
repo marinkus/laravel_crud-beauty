@@ -44,7 +44,7 @@ class PostController extends Controller
         ])->addPhotos($request->file('photo'));
 
 
-        return redirect()->route('post_index');
+        return redirect()->route('post_index')->with('msg', 'Post successfully created!');
     }
 
     /**
@@ -86,7 +86,7 @@ class PostController extends Controller
         $post->removePhotos($request->delete_photo)
         ->addPhotos($request->file('photo'));
 
-        return redirect()->route('post_index');
+        return redirect()->route('post_index')->with('msg', 'Post successfully updated!');
     }
 
     /**
@@ -102,6 +102,6 @@ class PostController extends Controller
             $post->removePhotos($delIds);
         }
         $post->delete();
-        return redirect()->route('post_index');
+        return redirect()->route('post_index')->with('msg', 'Post deleted!');
     }
 }
