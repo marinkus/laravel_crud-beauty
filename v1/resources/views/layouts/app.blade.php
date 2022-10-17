@@ -19,12 +19,12 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
-<body class="antialiased">
+<body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navi">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'MAC HairStylist') }}
+                    <img class="logo" src="{{URL::asset('assets/logo.png')}}" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

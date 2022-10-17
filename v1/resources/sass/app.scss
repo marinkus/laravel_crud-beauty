@@ -10,6 +10,13 @@
 body {
     background-color: #fff;
 }
+.container {
+    a {
+        .logo {
+            height: 100px;
+        }
+    }
+}
 
 .login-box {
     display: inline;
@@ -20,6 +27,7 @@ body {
     box-shadow: none;
     background-color: rgba(173, 168, 168, 0.877);
 }
+
 
 .nav-link {
     font-size: 16px;
@@ -161,13 +169,29 @@ body {
 }
 
 
-@media(max-width:800px) {
+@media(max-width:768px) {
     .navi {
         height: 80px;
     }
 
     .image {
         height: 400px;
+    }
+    .container {
+        a {
+            .logo {
+                height: 70px;
+            }
+        }
+    }
+    .col-3 {
+        width: auto;
+    }
+    .form-div {
+        margin: 0;
+    }
+    .navbar-collapse {
+        background-color: rgba(173, 168, 168, 0.877);
     }
 }
 
