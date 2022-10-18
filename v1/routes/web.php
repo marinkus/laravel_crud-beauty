@@ -18,9 +18,9 @@ use App\Http\Controllers\HomeController as HC;
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', [HC::class, 'index'])->name('home')->middleware('gate:home');
-Route::get('/', [HC::class, 'landingPage'])->name('welcome')->middleware('gate:home');
-Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about')->middleware('gate:home');
+Route::get('/home', [HC::class, 'index'])->name('home');
+Route::get('/', [HC::class, 'landingPage'])->name('welcome');
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 
 Route::prefix('post')->name('post_')->group(function () {
     Route::get('/', [Post::class, 'index'])->name('index')->middleware('gate:show');

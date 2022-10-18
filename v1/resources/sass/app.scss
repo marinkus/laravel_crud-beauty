@@ -10,6 +10,9 @@
 body {
     background-color: #fff;
 }
+.vh100 {
+    height: calc(100vh - 130px);
+}
 
 .container {
     a {
@@ -248,5 +251,10 @@ body {
     .block {
         display: block;
         width: 100%;
+    }
+}
+@media(max-width: 543px) {
+    .vh100 {
+        height: calc(100vh - 174px);
     }
 }

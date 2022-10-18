@@ -37,9 +37,9 @@
                                         <img src="{{ $photo->url }}" class="d-block w-100" alt="...">
                                         <div class="carousel-caption d-md-block">
                                             <div class="modal-context">
-                                                <h5 class="modal-content-title">{{ $photo->getPosts->title }}</h5>
+                                                {{-- <h5 class="modal-content-title">{{ $photo->getPosts->title }}</h5> --}}
                                                 <h6 class="modal-date">{{ $photo->getPosts->created_at }}</h6>
-                                                <p class="modal-description">{{ $photo->getPosts->comment }}</p>
+                                                {{-- <p class="modal-description">{{ $photo->getPosts->comment }}</p> --}}
                                             </div>
                                         </div>
                                     </div>
