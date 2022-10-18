@@ -10,8 +10,8 @@
 body {
     background-color: #fff;
 }
-.vh100 {
-    height: calc(100vh - 130px);
+.login-vh100 {
+    height: calc(100vh - 258px);
 }
 
 .container {
@@ -253,8 +253,16 @@ body {
         width: 100%;
     }
 }
-@media(max-width: 543px) {
-    .vh100 {
-        height: calc(100vh - 174px);
+@media(max-width: 768px) {
+    .login-vh100 {
+        height: calc(100vh - 218px);
+    }
+    .mar-0 {
+        margin: 0;
+    }
+}
+@media(max-width: 542px) {
+    .login-vh100 {
+        height: calc(100vh - 278px);
     }
 }
