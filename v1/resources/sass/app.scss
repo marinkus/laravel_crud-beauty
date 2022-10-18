@@ -192,6 +192,9 @@ body {
     }
 }
 
+.mar-0 {
+    width: auto;
+}
 .map-row {
     display: flex;
     justify-content: space-between;
@@ -259,6 +262,7 @@ body {
     }
     .mar-0 {
         margin: 0;
+        width: auto;
     }
 }
 @media(max-width: 542px) {

@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-8 col-lg-6 form-div">
+            <div class="col-lg-6 form-div mar-0">
                 <form action="{{route('post_store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                 <h3 class="heading">Create post</h3>
